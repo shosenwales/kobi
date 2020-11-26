@@ -18,6 +18,7 @@ body{
 }
 header{
     background: #000000;
+    font-family: 'Roboto', sans-serif;;
 }
 header .logo{
     float: left;
@@ -38,7 +39,8 @@ header nav{
 
 }
 .basic{
-    background: #FFAC0C;    
+    background: #FFAC0C;  
+    font-family: 'Roboto', sans-serif; 
 }
 .info{
   
@@ -61,10 +63,13 @@ a{
     display: inline;
   
 }
-#boxes{
+/* #boxes{
     background: #000000;
     padding-top: 120px;
     color: #FFFFFF;
+    font-family: 'Roboto', sans-serif; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #boxes .box{
@@ -75,13 +80,25 @@ a{
     line-height: 2em;
     margin-bottom: 120px;
 }
+*/ 
+
+#boxes{
+   
+    background: #000000;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif; 
+}
 .box-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 90px;
-    margin-bottom: 50px;
-    width: 15%;
+    margin-top: 50px;
+    margin-left: 400px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .projects{
@@ -95,6 +112,7 @@ a{
 .build{
     color: #FFFFFF;
     background: #000000;
+    font-family: 'Poppins', sans-serif;
 }
 .build-center{
     margin: auto;
@@ -153,8 +171,8 @@ hr{
 
 .menu-wrap .toggler{
     position: absolute;
-    /* top: 0;
-    right: 0; */
+    top: 1;
+    right: 1;
     z-index:2 ;
     cursor: pointer;
     width: 50px;
@@ -240,10 +258,10 @@ hr{
 }
 
 .menu-wrap .menu > div{
-    background: #000000;
-    border-radius: 50%;
-    width: 200vw;
-    height: 200vw;
+    background: rgb(0, 0, 0, 0.5);
+    /* border-radius: 50%; */
+    width: 100vw;
+    height: 100vw;
     display: flex;
     flex: none;
     align-items: center;
@@ -275,6 +293,14 @@ hr{
 .menu-wrap .menu > div > div > ul > li > a:hover{
     color: #FFAC0C;
 }
+i{
+    color: #FFFFFF;
+    font-size: 50px;
+    padding: 30px;
+}
+i:hover{
+    color: #FFAC0C;
+}
 /* media queries */
 @media (max-width: 700px) {
     *{
@@ -282,11 +308,44 @@ hr{
         padding: 0;
     }
     body{
-       width: 100vh;
+       position: absolute;
+       width: 100vw;
        
     }
     
    .menu-wrap .hamburger{
        width: 42px;
    }
+
+   .grid{
+       grid-template-columns: 1fr 1fr;
+   }
+   .works{
+       grid-template-columns: 1fr 1fr 1fr;
+   }
+   .works img{
+       width: 60%;
+       
+   }
+   .media{
+       width: 100%;
+       margin-bottom: 10px;
+   }
+   i{
+      font-size: 20px;
+      padding: 30px;
+   }
+   .box-img{
+       margin: 120px;
+       margin-top: 40px;
+       margin-bottom: 10px;
+       width: 30%;
+   }
+   .box img{
+       width: 50%;
+   }
+   .box{
+       padding-right: 30px;
+   }
+
 }
